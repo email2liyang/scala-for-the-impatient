@@ -13,7 +13,7 @@ class Counter {
   def isLessThan(other: Counter): Boolean = value < other.value
 }
 
-object Runner extends App {
+object Counter extends App {
 
   val counter = new Counter
   counter.increase()
