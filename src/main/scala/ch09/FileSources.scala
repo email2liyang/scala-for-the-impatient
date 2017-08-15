@@ -9,7 +9,14 @@ object FileSources extends App {
   source.getLines().foreach(line => println(line))
   source.close()
 
-  val source1 = Source.fromURL("http://horstmann.com")
+  val source1 = Source.fromURL("http://www.horstmann.com")
+  println(source1.mkString)
+  source1.close()
+
   val source2 = Source.fromString("Hello world")
+  println(source2.mkString)
+  source2.close()
+
+
 
 }
