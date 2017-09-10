@@ -1,6 +1,6 @@
 package ch14
 
-abstract class Amount
+sealed abstract class Amount
 
 case class Dollar(value: Double) extends Amount
 
