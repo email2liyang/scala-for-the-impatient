@@ -1,3 +1,4 @@
+val sampleStringTask = taskKey[String]("A sample string task.")
 
 lazy val commonSettings = Seq(
   organization := "com.github",
@@ -8,6 +9,11 @@ lazy val commonSettings = Seq(
 lazy val root = (project in file("."))
   .settings(
     commonSettings,
+    sampleStringTask := {
+      val homeDir = System.getProperty("user.home")
+      println(homeDir)
+      homeDir
+    },
     name := "scala-for-the-impatient",
     // https://mvnrepository.com/artifact/org.scala-lang/scala-xml
     libraryDependencies += "org.scala-lang" % "scala-xml" % "2.11.0-M4"
